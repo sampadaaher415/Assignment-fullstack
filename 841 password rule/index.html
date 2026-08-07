@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Password Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Password Verification</h2>
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<br><br>
+
+<button onclick="checkPassword()">
+    Check Password
+</button>
+
+<p id="result"></p>
+
+<!-- Hidden by default -->
+<div id="rule" class="rule">
+
+    <h3>841 Password Rule</h3>
+
+    <ul>
+        <li>Minimum 8 characters</li>
+        <li>Use all four character types</li>
+        <li>Uppercase (A-Z)</li>
+        <li>Lowercase (a-z)</li>
+        <li>Number (0-9)</li>
+        <li>Special Character (@,#,$,%)</li>
+        <li>Avoid common names and easy passwords</li>
+    </ul>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
