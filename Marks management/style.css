@@ -1,0 +1,41 @@
+body {
+    font-family: Arial;
+    background-color:lightgoldenrodyellow;
+}
+
+.container {
+    width: 400px;
+    margin: 30px auto;
+    background-color:lightcyan;
+    padding: 20px;
+    text-align: center;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}
+
+table {
+    width: 60%;
+    margin: 20px auto;
+    background-color: white;
+}
+
+th {
+    background-color: green;
+    color: white;
+}
+
+td, th {
+    padding: 8px;
+    text-align: center;
+}

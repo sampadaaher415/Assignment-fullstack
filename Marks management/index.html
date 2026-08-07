@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Result</title>
+     <link rel="stylesheet" href="style.css"
+</head>
+
+<body>
+
+    <h2>Student Result</h2>
+
+    Student Name:
+    <input type="text" id="name">
+    <br><br>
+
+    Physics:
+    <input type="number" id="phy">
+    <br><br>
+
+    Chemistry:
+    <input type="number" id="chem">
+    <br><br>
+
+    Mathematics:
+    <input type="number" id="math">
+    <br><br>
+
+
+    <button onclick="calculate()">Calculate</button>
+
+    <br><br>
+
+
+    Total Marks:
+    <input type="text" id="total" readonly>
+
+    <br><br>
+
+    Percentage:
+    <input type="text" id="percentage" readonly>
+
+
+    <h3>Student Records</h3>
+
+
+    <table border="1" id="studentTable">
+
+        <tr>
+            <th>Name</th>
+            <th>Total</th>
+            <th>Percentage</th>
+        </tr>
+
+    </table>
+
+
+    <h3 id="topper">Topper:</h3>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
