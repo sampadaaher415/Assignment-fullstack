@@ -1,0 +1,59 @@
+.area {
+    position: relative;
+    margin: 150px auto;
+}
+
+.boxes {
+    width: 200px;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    margin: auto;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    transition: 0.5s;
+}
+
+.red {
+    background: red;
+}
+
+.blue {
+    background: blue;
+}
+
+.green {
+    background: green;
+}
+
+.orange {
+    background: orange;
+}
+
+.text {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.boxes:hover .red,
+.boxes:hover .green {
+    transform: translateX(-120px) rotate(-90deg);
+}
+
+.boxes:hover .blue,
+.boxes:hover .orange {
+    transform: translateX(120px) rotate(90deg);
+}
+
+.boxes:hover + .text {
+    opacity: 1;
+}
