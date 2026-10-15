@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+</head>
+<body>
+    <h1>Student Management System</h1>
+
+    <h3>Add Student</h3>
+
+    <input type="number" id="id" placeholder="Student ID">
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="number" id="marks" placeholder="Student Marks">
+
+    <button onclick="addStudent()">Add Student</button>
+    <button onclick="showStudents()">Show Students</button>
+
+    <h3>Student List</h3>
+    <ul id="list"></ul>
+
+    <script>
+        async function showStudents() {
+            const response = await fetch("/students");
+            const students = await response.json();
+
+            const list = document.getElementById("list");
+            list.innerHTML = "";
+
+            students.forEach(student => {
+                const item = document.createElement("li");
+                item.textContent =
+                    student.id + " - " + student.name +
+                    " - Marks: " + student.marks;
+                list.appendChild(item);
+            });
+        }
+
+        async function addStudent() {
+            const student = {
+                id: Number(document.getElementById("id").value),
+                name: document.getElementById("name").value,
+                marks: Number(document.getElementById("marks").value)
+            };
+
+            const response = await fetch("/students", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(student)
+            });
+
+            alert(await response.text());
+            showStudents();
+        }
+
+        showStudents();
+    </script>
+</body>
+</html>

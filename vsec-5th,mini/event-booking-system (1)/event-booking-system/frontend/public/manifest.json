@@ -1,0 +1,8 @@
+{
+  "short_name": "Seatwise",
+  "name": "Seatwise event booking",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#221C48",
+  "background_color": "#F3F1F7"
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ScreenBug AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🐞 ScreenBug AI</h1>
+            <p>AI-Powered UI Bug Analyzer</p>
+        </header>
+
+        <main>
+
+            <section class="card">
+
+                <h2>1. Upload Screenshot</h2>
+
+                <input
+                    type="file"
+                    id="screenshot"
+                    accept="image/png,image/jpeg,image/webp"
+                >
+
+                <div id="preview-container">
+                    <img id="preview" alt="Screenshot preview">
+                </div>
+
+            </section>
+
+            <section class="card">
+
+                <h2>2. Describe the Problem</h2>
+
+                <textarea
+                    id="description"
+                    placeholder="Example: The button looks wrong on my phone. It is too wide and goes outside the screen."
+                ></textarea>
+
+            </section>
+
+            <button id="analyzeBtn">
+                🔍 Analyze Bug
+            </button>
+
+            <section class="card result-card">
+
+                <h2>3. AI Bug Report</h2>
+
+                <div id="loading">
+                    Analyzing screenshot...
+                </div>
+
+                <div id="result">
+                    Your bug report will appear here.
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>ScreenBug AI • Multimodal UI Bug Analyzer</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
